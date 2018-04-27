@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <div *ngFor="let prop of objectProps">
+    <label [attr.for]="prop">{{prop.label}}</label>
+
+    <div [ngSwitch]="prop.type">
+
+      <input *ngSwitchCase="'text'" [formControlName]="prop.key" [id]="prop.key" [type]="prop.type">
+
+    </div>
+  </div>
+</form>
+<pre>{{ form.value | json}}</pre>

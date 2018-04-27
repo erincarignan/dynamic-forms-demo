@@ -1,0 +1,17 @@
+<h3>
+  <i>Using FormBuilder (syntatic sugar that replaces FormControls)</i>
+</h3>
+<form [formGroup]="form">
+  <div>
+    <label>Name:
+      <input formControlName="name">
+    </label>
+  </div>
+  <div>
+    <label>Street:
+      <input formControlName="street">
+    </label>
+  </div>
+</form>
+
+<pre>{{ form.value | json }}</pre>

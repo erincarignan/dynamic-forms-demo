@@ -1,0 +1,21 @@
+<h3>
+  <i>Using FormBuilder with input data model</i>
+  <p>Uses formGroupName to show nested values</p>
+</h3>
+<form [formGroup]="form">
+  <div>
+    <label>Name:
+      <input formControlName="name">
+    </label>
+  </div>
+  <div formGroupName="address">
+    <label>Street:
+      <input formControlName="street">
+    </label>
+    <label>City:
+      <input formControlName="city">
+    </label>
+  </div>
+</form>
+
+<pre>{{ form.value | json }}</pre>

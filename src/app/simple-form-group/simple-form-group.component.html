@@ -1,0 +1,10 @@
+<h3>
+  <i>Using Form Group requires use of formControlName</i>
+</h3>
+<form [formGroup]='form'>
+  <label>Name:
+    <input formControlName="name">
+  </label>
+</form>
+
+<pre>{{ form.value | json }}</pre>
